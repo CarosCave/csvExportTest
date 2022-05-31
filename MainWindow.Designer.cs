@@ -20,6 +20,8 @@
             base.Dispose(disposing);
         }
 
+       
+
         #region Vom Windows Form-Designer generierter Code
 
         /// <summary>
@@ -31,11 +33,13 @@
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chBoxBladeSpeed = new System.Windows.Forms.CheckBox();
             this.chBxBladeCurrent = new System.Windows.Forms.CheckBox();
             this.chBxBladePower = new System.Windows.Forms.CheckBox();
             this.chBxBladeIsEnable = new System.Windows.Forms.CheckBox();
@@ -45,8 +49,12 @@
             this.txtBoxCommission = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.txtBoxPath = new System.Windows.Forms.TextBox();
+            this.btnPath = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,13 +86,18 @@
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(191, 34);
             this.testToolStripMenuItem.Text = "Speichern";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(191, 34);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -106,22 +119,33 @@
             // überToolStripMenuItem
             // 
             this.überToolStripMenuItem.Name = "überToolStripMenuItem";
-            this.überToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.überToolStripMenuItem.Size = new System.Drawing.Size(152, 34);
             this.überToolStripMenuItem.Text = "Über";
             this.überToolStripMenuItem.Click += new System.EventHandler(this.überToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chBoxBladeSpeed);
             this.groupBox1.Controls.Add(this.chBxBladeCurrent);
             this.groupBox1.Controls.Add(this.chBxBladePower);
             this.groupBox1.Controls.Add(this.chBxBladeIsEnable);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(10, 193);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 213);
+            this.groupBox1.Size = new System.Drawing.Size(419, 309);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Flügel";
+            // 
+            // chBoxBladeSpeed
+            // 
+            this.chBoxBladeSpeed.AutoSize = true;
+            this.chBoxBladeSpeed.Location = new System.Drawing.Point(6, 157);
+            this.chBoxBladeSpeed.Name = "chBoxBladeSpeed";
+            this.chBoxBladeSpeed.Size = new System.Drawing.Size(116, 29);
+            this.chBoxBladeSpeed.TabIndex = 3;
+            this.chBoxBladeSpeed.Text = "Drehzahl";
+            this.chBoxBladeSpeed.UseVisualStyleBackColor = true;
             // 
             // chBxBladeCurrent
             // 
@@ -155,12 +179,13 @@
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(1271, 650);
+            this.btnExport.Location = new System.Drawing.Point(1084, 642);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(232, 70);
             this.btnExport.TabIndex = 2;
             this.btnExport.Text = "Export";
             this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // groupBox2
             // 
@@ -208,11 +233,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kommission";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(484, 81);
@@ -220,11 +240,49 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(360, 26);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // textBoxDate
+            // 
+            this.textBoxDate.Location = new System.Drawing.Point(1046, 396);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.Size = new System.Drawing.Size(351, 26);
+            this.textBoxDate.TabIndex = 5;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(1337, 642);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(221, 70);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "Schließen";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // txtBoxPath
+            // 
+            this.txtBoxPath.Location = new System.Drawing.Point(1027, 197);
+            this.txtBoxPath.Name = "txtBoxPath";
+            this.txtBoxPath.Size = new System.Drawing.Size(289, 26);
+            this.txtBoxPath.TabIndex = 7;
+            // 
+            // btnPath
+            // 
+            this.btnPath.Location = new System.Drawing.Point(1361, 195);
+            this.btnPath.Name = "btnPath";
+            this.btnPath.Size = new System.Drawing.Size(131, 27);
+            this.btnPath.TabIndex = 8;
+            this.btnPath.Text = "Ordner";
+            this.btnPath.UseVisualStyleBackColor = true;
+            this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1660, 757);
+            this.Controls.Add(this.btnPath);
+            this.Controls.Add(this.txtBoxPath);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExport);
@@ -232,6 +290,7 @@
             this.Controls.Add(this.MainMenu);
             this.MainMenuStrip = this.MainMenu;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CSV Test Export";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
@@ -265,6 +324,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckBox chBoxBladeSpeed;
+        private System.Windows.Forms.TextBox textBoxDate;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.TextBox txtBoxPath;
+        private System.Windows.Forms.Button btnPath;
     }
+    
+    
 }
 

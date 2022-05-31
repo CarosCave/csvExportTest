@@ -34,7 +34,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(92, 84);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(138, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 40);
             this.button1.TabIndex = 0;
@@ -58,9 +60,13 @@
             this.ClientSize = new System.Drawing.Size(385, 149);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "About";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
