@@ -41,14 +41,19 @@ namespace CSV_Export_Testdatei
 
 
             if (DateTime.Now.Month < 10) month = "0" + DateTime.Now.Month.ToString();
-            else month = DateTime.Now.Month.ToString(); 
+            else month = DateTime.Now.Month.ToString();
 
+            if (DateTime.Now.Day < 10) day = "0" + DateTime.Now.Day.ToString();
+            else day = DateTime.Now.Day.ToString();
 
-            string month; = DateTime.Now.Month.ToString();
-            string day; = DateTime.Now.Day.ToString();
-            string hour; = DateTime.Now.Hour.ToString();
-            string minute; = DateTime.Now.Minute.ToString();
-            string second; = DateTime.Now.Second.ToString();
+            if (DateTime.Now.Hour < 10) hour = "0" + DateTime.Now.Hour.ToString();
+            else hour = DateTime.Now.Hour.ToString();
+
+            if (DateTime.Now.Minute < 10) minute = "0" + DateTime.Now.Minute.ToString();
+            else minute = DateTime.Now.Minute.ToString();
+
+            if (DateTime.Now.Second < 10) second = "0" + DateTime.Now.Second.ToString();
+            else second = DateTime.Now.Second.ToString();
 
 
             string fileName = txtBoxCommission.Text + "_" + year + "-" + month + "-" + day + "_" + hour + "-" + minute + "-" + second + ".csv";
