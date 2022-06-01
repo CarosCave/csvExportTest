@@ -39,10 +39,21 @@
             this.hilfeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.überToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxBladeSpeedMax = new System.Windows.Forms.TextBox();
+            this.textBoxBladeSpeedMin = new System.Windows.Forms.TextBox();
+            this.textBoxBladePowerMax = new System.Windows.Forms.TextBox();
+            this.textBoxBladePowerMin = new System.Windows.Forms.TextBox();
+            this.textBoxBladeCurrentMax = new System.Windows.Forms.TextBox();
+            this.textBoxBladeCurrentMin = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.chBoxBladeSpeed = new System.Windows.Forms.CheckBox();
             this.chBxBladeCurrent = new System.Windows.Forms.CheckBox();
             this.chBxBladePower = new System.Windows.Forms.CheckBox();
-            this.chBxBladeIsEnable = new System.Windows.Forms.CheckBox();
             this.btnExport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtBoxMachine = new System.Windows.Forms.TextBox();
@@ -55,14 +66,15 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.txtBoxPath = new System.Windows.Forms.TextBox();
             this.btnPath = new System.Windows.Forms.Button();
+            this.groupBoxFolder = new System.Windows.Forms.GroupBox();
             this.MainMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBoxFolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
             // 
-            this.MainMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.MainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
@@ -125,22 +137,133 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.textBoxBladeSpeedMax);
+            this.groupBox1.Controls.Add(this.textBoxBladeSpeedMin);
+            this.groupBox1.Controls.Add(this.textBoxBladePowerMax);
+            this.groupBox1.Controls.Add(this.textBoxBladePowerMin);
+            this.groupBox1.Controls.Add(this.textBoxBladeCurrentMax);
+            this.groupBox1.Controls.Add(this.textBoxBladeCurrentMin);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.chBoxBladeSpeed);
             this.groupBox1.Controls.Add(this.chBxBladeCurrent);
             this.groupBox1.Controls.Add(this.chBxBladePower);
-            this.groupBox1.Controls.Add(this.chBxBladeIsEnable);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(10, 193);
+            this.groupBox1.Location = new System.Drawing.Point(10, 356);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 309);
+            this.groupBox1.Size = new System.Drawing.Size(532, 309);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Flügel";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(409, 215);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 25);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "1/min";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(409, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 25);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "kW";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(409, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 25);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "A";
+            // 
+            // textBoxBladeSpeedMax
+            // 
+            this.textBoxBladeSpeedMax.Location = new System.Drawing.Point(304, 212);
+            this.textBoxBladeSpeedMax.Name = "textBoxBladeSpeedMax";
+            this.textBoxBladeSpeedMax.Size = new System.Drawing.Size(81, 30);
+            this.textBoxBladeSpeedMax.TabIndex = 16;
+            // 
+            // textBoxBladeSpeedMin
+            // 
+            this.textBoxBladeSpeedMin.Location = new System.Drawing.Point(204, 212);
+            this.textBoxBladeSpeedMin.Name = "textBoxBladeSpeedMin";
+            this.textBoxBladeSpeedMin.Size = new System.Drawing.Size(81, 30);
+            this.textBoxBladeSpeedMin.TabIndex = 15;
+            // 
+            // textBoxBladePowerMax
+            // 
+            this.textBoxBladePowerMax.Location = new System.Drawing.Point(304, 176);
+            this.textBoxBladePowerMax.Name = "textBoxBladePowerMax";
+            this.textBoxBladePowerMax.Size = new System.Drawing.Size(81, 30);
+            this.textBoxBladePowerMax.TabIndex = 14;
+            // 
+            // textBoxBladePowerMin
+            // 
+            this.textBoxBladePowerMin.Location = new System.Drawing.Point(204, 176);
+            this.textBoxBladePowerMin.Name = "textBoxBladePowerMin";
+            this.textBoxBladePowerMin.Size = new System.Drawing.Size(81, 30);
+            this.textBoxBladePowerMin.TabIndex = 13;
+            // 
+            // textBoxBladeCurrentMax
+            // 
+            this.textBoxBladeCurrentMax.Location = new System.Drawing.Point(304, 140);
+            this.textBoxBladeCurrentMax.Name = "textBoxBladeCurrentMax";
+            this.textBoxBladeCurrentMax.Size = new System.Drawing.Size(81, 30);
+            this.textBoxBladeCurrentMax.TabIndex = 12;
+            // 
+            // textBoxBladeCurrentMin
+            // 
+            this.textBoxBladeCurrentMin.Location = new System.Drawing.Point(204, 140);
+            this.textBoxBladeCurrentMin.Name = "textBoxBladeCurrentMin";
+            this.textBoxBladeCurrentMin.Size = new System.Drawing.Size(81, 30);
+            this.textBoxBladeCurrentMin.TabIndex = 11;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Eine Drehzahl",
+            "Polumschaltbar",
+            "FU gesteuert"});
+            this.comboBox1.Location = new System.Drawing.Point(11, 33);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(211, 33);
+            this.comboBox1.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(299, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 25);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Max.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(214, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Min.";
+            // 
             // chBoxBladeSpeed
             // 
             this.chBoxBladeSpeed.AutoSize = true;
-            this.chBoxBladeSpeed.Location = new System.Drawing.Point(6, 157);
+            this.chBoxBladeSpeed.Location = new System.Drawing.Point(11, 211);
             this.chBoxBladeSpeed.Name = "chBoxBladeSpeed";
             this.chBoxBladeSpeed.Size = new System.Drawing.Size(116, 29);
             this.chBoxBladeSpeed.TabIndex = 3;
@@ -150,7 +273,7 @@
             // chBxBladeCurrent
             // 
             this.chBxBladeCurrent.AutoSize = true;
-            this.chBxBladeCurrent.Location = new System.Drawing.Point(6, 122);
+            this.chBxBladeCurrent.Location = new System.Drawing.Point(11, 175);
             this.chBxBladeCurrent.Name = "chBxBladeCurrent";
             this.chBxBladeCurrent.Size = new System.Drawing.Size(112, 29);
             this.chBxBladeCurrent.TabIndex = 2;
@@ -160,22 +283,12 @@
             // chBxBladePower
             // 
             this.chBxBladePower.AutoSize = true;
-            this.chBxBladePower.Location = new System.Drawing.Point(6, 87);
+            this.chBxBladePower.Location = new System.Drawing.Point(11, 139);
             this.chBxBladePower.Name = "chBxBladePower";
             this.chBxBladePower.Size = new System.Drawing.Size(90, 29);
             this.chBxBladePower.TabIndex = 1;
             this.chBxBladePower.Text = "Strom";
             this.chBxBladePower.UseVisualStyleBackColor = true;
-            // 
-            // chBxBladeIsEnable
-            // 
-            this.chBxBladeIsEnable.AutoSize = true;
-            this.chBxBladeIsEnable.Location = new System.Drawing.Point(6, 48);
-            this.chBxBladeIsEnable.Name = "chBxBladeIsEnable";
-            this.chBxBladeIsEnable.Size = new System.Drawing.Size(189, 29);
-            this.chBxBladeIsEnable.TabIndex = 0;
-            this.chBxBladeIsEnable.Text = "Flügel vorhanden";
-            this.chBxBladeIsEnable.UseVisualStyleBackColor = true;
             // 
             // btnExport
             // 
@@ -259,28 +372,41 @@
             // 
             // txtBoxPath
             // 
-            this.txtBoxPath.Location = new System.Drawing.Point(1027, 197);
+            this.txtBoxPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtBoxPath.Location = new System.Drawing.Point(11, 46);
             this.txtBoxPath.Name = "txtBoxPath";
-            this.txtBoxPath.Size = new System.Drawing.Size(289, 26);
+            this.txtBoxPath.Size = new System.Drawing.Size(338, 30);
             this.txtBoxPath.TabIndex = 7;
             // 
             // btnPath
             // 
-            this.btnPath.Location = new System.Drawing.Point(1361, 195);
+            this.btnPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnPath.Location = new System.Drawing.Point(218, 87);
             this.btnPath.Name = "btnPath";
-            this.btnPath.Size = new System.Drawing.Size(131, 27);
+            this.btnPath.Size = new System.Drawing.Size(131, 38);
             this.btnPath.TabIndex = 8;
             this.btnPath.Text = "Ordner";
             this.btnPath.UseVisualStyleBackColor = true;
             this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
+            // 
+            // groupBoxFolder
+            // 
+            this.groupBoxFolder.Controls.Add(this.txtBoxPath);
+            this.groupBoxFolder.Controls.Add(this.btnPath);
+            this.groupBoxFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxFolder.Location = new System.Drawing.Point(10, 197);
+            this.groupBoxFolder.Name = "groupBoxFolder";
+            this.groupBoxFolder.Size = new System.Drawing.Size(400, 137);
+            this.groupBoxFolder.TabIndex = 9;
+            this.groupBoxFolder.TabStop = false;
+            this.groupBoxFolder.Text = "Ordnerauswahl";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1660, 757);
-            this.Controls.Add(this.btnPath);
-            this.Controls.Add(this.txtBoxPath);
+            this.Controls.Add(this.groupBoxFolder);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.dateTimePicker1);
@@ -298,6 +424,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBoxFolder.ResumeLayout(false);
+            this.groupBoxFolder.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,7 +443,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chBxBladeCurrent;
         private System.Windows.Forms.CheckBox chBxBladePower;
-        private System.Windows.Forms.CheckBox chBxBladeIsEnable;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtBoxMachine;
@@ -330,6 +457,19 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.TextBox txtBoxPath;
         private System.Windows.Forms.Button btnPath;
+        private System.Windows.Forms.GroupBox groupBoxFolder;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxBladeSpeedMax;
+        private System.Windows.Forms.TextBox textBoxBladeSpeedMin;
+        private System.Windows.Forms.TextBox textBoxBladePowerMax;
+        private System.Windows.Forms.TextBox textBoxBladePowerMin;
+        private System.Windows.Forms.TextBox textBoxBladeCurrentMax;
+        private System.Windows.Forms.TextBox textBoxBladeCurrentMin;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
     
     

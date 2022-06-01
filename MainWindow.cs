@@ -59,11 +59,12 @@ namespace CSV_Export_Testdatei
             string fileName = txtBoxCommission.Text + "_" + year + "-" + month + "-" + day + "_" + hour + "-" + minute + "-" + second + ".csv";
 
             textBoxDate.Text = fileName;
-            
+
+            string file = txtBoxPath.Text + @"\" + fileName; 
 
             
 
-            FileStream fs = new FileStream(fileName, FileMode.Create);
+            FileStream fs = new FileStream(file, FileMode.Create);
             fs.Close();
 
 
@@ -85,5 +86,7 @@ namespace CSV_Export_Testdatei
 
             txtBoxPath.Text = path;
         }
+
+ 
     }
 }
